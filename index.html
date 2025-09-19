@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Amigo Secreto</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">Amigo Secreto</h1>
+            <p class="subtitle">Organiza tu Sorteo</p>
+        </header>
+        
+        <main class="content">
+            <h2 class="section-title">Agrega los nombres de tus amigos</h2>
+            
+            <div class="input-container">
+                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre..." maxlength="50">
+                <button class="btn-add" onclick="agregarAmigo()">Añadir</button>
+            </div>
+            
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list">
+                <li class="empty-state">Los nombres aparecerán aquí...</li>
+            </ul>
+            
+            <button class="btn-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                Sortear Amigo Secreto
+            </button>
+            
+            <div class="result-container">
+                <ul id="resultado" class="result-list" aria-live="polite"></ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
